@@ -20,41 +20,41 @@ cities['OR'] = 'Portland'
 
 # print out some cities
 print '-' * 10
-print "NY State has: ", cities['NY']
-print "OR State has: ", cities['OR']
+print 'NY State has: ', cities['NY']
+print 'OR State has: ', cities['OR']
 
 # print some states
 print '-' * 10
-print "Michigan's abbreviation is: ", states['Michigan']
-print "Florida's abbreviation is: ", states['Florida']
+print 'Michigan\'s abbreviation is: ', states['Michigan']
+print 'Florida\'s abbreviation is: ', states['Florida']
 
 # do it by using the state when cities dict
 print '-' * 10
-print "Michigan has: ", cities[states['Michigan']]
-print "Florida has: ", cities[states['Florida']]
+print 'Michigan has: ', cities[states['Michigan']]
+print 'Florida has: ', cities[states['Florida']]
 
 # print every state abbreviation
 print '-' * 10
 for state, abbrev in states.items():
-    print "%s is abbreviated %s" % (state, abbrev)
+    print '{} is abbreviated {}'.format(state, abbrev)
 
 # print every city in state
 print '-' * 10
 for abbrev, city in cities.items():
-    print "%s has the city %s" % (abbrev, city)
+    print '{} has the city {}'.format(abbrev, city)
 
 # now do both at the same time
 print '-' * 10
 for state, abbrev in states.items():
-    print "%s state is abbreviated %s and has city %s" % (state, abbrev, cities[abbrev])
-
+    print '{} state is abbreviated {} and has city {}'.format(state, abbrev, cities[abbrev])
 print '-' * 10
+
 # safely get an abbreviation by state that might not be there
 state = states.get('Texas', None)
 
 if not state:
-    print "Sorry, no Texas."
+    print 'Sorry, no Texas.'
 
 # get a city with a default value
 city = cities.get('TX', 'Does Not Exist')
-print "The city for the state 'TX' is: %s" % city
+print 'The city for the state "TX" is: {}'.format(city)
