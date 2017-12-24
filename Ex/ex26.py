@@ -3,30 +3,36 @@ def break_words(stuff):
     words = stuff.split(' ')
     return words
 
+
 def sort_words(words):
     """Sorts the words."""
     return sorted(words)
+
 
 def print_first_word(words):
     """Prints the first word after popping it off."""
     word = words.pop(0)
     print word
 
+
 def print_last_word(words):
     """Prints the last word after popping it off."""
     word = words.pop(-1)
     print word
+
 
 def sort_sentence(sentence):
     """Takes in a full sentence and returns the sorted words."""
     words = break_words(sentence)
     return sort_words(words)
 
+
 def print_first_and_last(sentence):
     """Prints the first and last words of the sentence."""
     words = break_words(sentence)
     print_first_word(words)
     print_last_word(words)
+
 
 def print_first_and_last_sorted(sentence):
     """Sorts the words then prints the first and last one."""
@@ -47,7 +53,6 @@ and requires an explanation
 \n\t\t where there is none.
 """
 
-
 print "--------------"
 print poem
 print "--------------"
@@ -55,11 +60,13 @@ print "--------------"
 five = 10 - 2 + 2 - 5
 print "This should be five: %s" % five
 
+
 def secret_formula(started):
     jelly_beans = start_point * 500
     jars = jelly_beans / 1000
     crates = jars / 100
     return jelly_beans, jars, crates
+
 
 start_point = 10000 / 10
 jelly_beans = start_point * 500
@@ -71,10 +78,8 @@ jelly_beans, jars, crates == secret_formula(start_point)
 print "With a starting point of: %d" % start_point
 print "We'd have %d jelly_beans, %d jars, and %d crates." % (jelly_beans, jars, crates)
 
-
 print "We can also do that this way:"
 print "We'd have %d jelly_beans, %d jars, and %d crates." % secret_formula(start_point)
-
 
 sentence = "All good \t things come to those who wait."
 
